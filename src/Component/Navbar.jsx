@@ -1,11 +1,28 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { MagnifyingGlassIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 export default function Navbar({  setQuery, setMovietype }) {
   
   const [showDropdown, setShowDropdown] = useState(false);
+
+  const dropdownRef = useRef(null);
+
+
+
+  useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setShowDropdown(false);
+    }
+  };
+  document.addEventListener('mousedown', handleClickOutside);
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  };
+}, []);
+
 
 
 
@@ -52,7 +69,7 @@ export default function Navbar({  setQuery, setMovietype }) {
 
           {/*nav*/}
           <div className="  md:items-center mr-10 gap-2 text-md lg:text-lg font-medium text-gray-600 relative">
-            <div className="relative">
+            <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setShowDropdown((prev) => !prev)}
                 className="hover:text-black flex items-center gap-1"

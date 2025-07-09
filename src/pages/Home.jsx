@@ -9,6 +9,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Navbar from '../Component/Navbar';
 import axios from 'axios';
 import Movies from '../Movies';
+import { Link } from 'react-router';
 const Home = ({ movies, setMovies, query, setQuery, pages, setPages , movietype, setMovietype }) => {
     let[ totalpages, setTotalpages] = useState(0)
 
@@ -74,12 +75,12 @@ const Home = ({ movies, setMovies, query, setQuery, pages, setPages , movietype,
                 className="mySwiper"
                 loop="true"
             >
-                <SwiperSlide><a href="#"><img className='' src="https://wallpapercave.com/wp/wp15474023.jpg" alt="" /></a></SwiperSlide>
-                <SwiperSlide><a href="#"><img className='' src="https://wallpapercave.com/wp/wp15495282.jpg" alt="" /></a></SwiperSlide>
-                <SwiperSlide><a href="#"><img className='' src="https://wallpapercave.com/wp/wp15515592.jpg" alt="" /></a></SwiperSlide>
-                <SwiperSlide><a href="#"><img className='' src="https://wallpapercave.com/wp/wp15495330.jpg" alt="" /></a></SwiperSlide>
-                <SwiperSlide><a href="#"><img className='' src="https://wallpapercave.com/wp/wp15532853.jpg" alt="" /></a></SwiperSlide>
-                <SwiperSlide><a href="#"><img className='' src="https://wallpapercave.com/wp/wp13798652.jpg" alt="" /></a></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt36711188"}><img className='' src="https://wallpapercave.com/wp/wp15474023.jpg" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt2096350"}><img className='' src="https://wallpapercave.com/wp/wp15495282.jpg" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt14205554"}><img className='' src="https://wallpapercave.com/wp/wp15515592.jpg" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt26743210"}><img className='' src="https://wallpapercave.com/wp/wp15495330.jpg" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt26342662"}><img className='' src="https://wallpapercave.com/wp/wp15532853.jpg" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt10676052"}><img className='' src="https://wallpapercave.com/wp/wp13798652.jpg" alt="" /></Link></SwiperSlide>
 
 
 
