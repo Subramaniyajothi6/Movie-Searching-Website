@@ -9,7 +9,7 @@ const MovieDetail = () => {
 
     useEffect(() => {
         const fetchMovie = async () => {
-            const url = `https://www.omdbapi.com/?i=${params.get('id')}&apikey=d987e76f`;
+            const url = `https://www.omdbapi.com/?i=${params.get('id')}&apikey=${import.meta.env.VITE_OMDB_API_KEY}`;
 
             try {
                 const response = await axios.get(url);

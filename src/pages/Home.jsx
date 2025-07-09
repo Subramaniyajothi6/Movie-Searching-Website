@@ -17,7 +17,7 @@ const Home = ({ movies, setMovies, query, setQuery, pages, setPages , movietype,
     useEffect(() => {
  const delayDebounce = setTimeout(() => {        if (query.trim() !== '') {
             const fetchData = async () => {
-                const url = `https://www.omdbapi.com/?s=${query}&apikey=d987e76f&page=${pages}&type=${movietype}`;
+                const url = `https://www.omdbapi.com/?s=${query}&apikey=${import.meta.env.VITE_OMDB_API_KEY}&page=${pages}&type=${movietype}`;
                 console.log("Fetching from:", url);
 
                 try {
