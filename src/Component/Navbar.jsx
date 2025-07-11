@@ -32,7 +32,7 @@ export default function Navbar({  setQuery, setMovietype }) {
   return (
     <header className="bg-white/10   shadow sm:sticky top-0 z-50">
       <nav className=" mx-auto container " aria-label="Top">
-        <div className="flex flex-col  sm:flex-row gap-2 sm:gap-0 my-2 sm:my-0 sm:py-2 items-center justify-between  ">
+        <div className="flex flex-col  sm:flex-row gap-2 sm:gap-0 py-4 mb-2 sm:my-0 sm:py-2 items-center justify-between  ">
           {/* Logo */}
           <div className="flex items-center  ">
             <a href="#" className='flex '>
@@ -68,11 +68,11 @@ export default function Navbar({  setQuery, setMovietype }) {
           </div>
 
           {/*nav*/}
-          <div className="  md:items-center mr-10 gap-2 text-md lg:text-lg font-medium text-gray-600 relative">
+          <div className="  md:items-center mr-10 gap-2 text-md lg:text-lg font-medium text-gray-100 relative">
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setShowDropdown((prev) => !prev)}
-                className="hover:text-black flex items-center gap-1"
+                className="hover:text-gray-600 flex items-center gap-1"
               >
                 Categories
                 <svg className="w-4 h-4 mt-[2px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
