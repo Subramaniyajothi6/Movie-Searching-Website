@@ -2,7 +2,7 @@
 import { Link } from 'react-router'
 
 
-const Movies = ({ movies, pages, setPages, totalpages ,query }) => {
+const Movies = ({ movies, pages, setPages, totalpages, query }) => {
 
 
 
@@ -26,22 +26,25 @@ const Movies = ({ movies, pages, setPages, totalpages ,query }) => {
 
                 <ul>
                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-5  '>
-                        {movies.map((movie) => {
-                            return (
-
-                                <div key={movie.imdbID} className='text-center rounded-md  hover:scale-105 transition duration-300 font-medium drop-shadow-stone-50 '>
-                                    <Link to={`/moviesdetails?id=${movie.imdbID}`} >
-                                        <img src={movie.Poster} alt={movie.Title} className='mx-auto max-h-100  rounded-md ' />
-                                        <h3 className=' text-xl font-bold  '>{movie.Title?.slice(0, 30)}</h3>
+                        {movies.length > 0 ? (
+                            movies.map((movie) => (
+                                <div key={movie.imdbID} className='text-center rounded-md hover:scale-105 transition duration-300 font-medium drop-shadow-stone-50'>
+                                    <Link to={`/moviesdetails?id=${movie.imdbID}`}>
+                                        <img src={movie.Poster} alt={movie.Title} className='mx-auto max-h-100 rounded-md' />
+                                        <h3 className='text-xl font-bold'>{movie.Title?.slice(0, 30)}</h3>
                                         <p>Year : {movie.Year}</p>
                                         <p>Type : {movie.Type}</p>
                                     </Link>
                                 </div>
-
-
-
+                            ))
+                        ) : (
+                            query.trim() !== '' && (
+                                <p className='text-center text-4xl font-bold text-red-600 col-span-full my-10'>
+                                    No movies found for your search.
+                                </p>
                             )
-                        })}
+                        )}
+
                     </div>
 
 
