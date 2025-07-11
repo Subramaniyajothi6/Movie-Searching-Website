@@ -49,7 +49,7 @@ export default function Navbar({  setQuery, setMovietype }) {
           {/* Search Bar */}
           <div className=" md:ml-20 md:flex-1    ">
             <div className="relative md:w-4/5  ">
-              <form action="" className="relative " onSubmit={(e) => {e.preventDefault(); setQuery(e.target.value)}} >
+              <form action="" className="relative " onSubmit={(e) => {e.preventDefault();}} >
                 <input
                   type="text"
                   placeholder="Search movies..."

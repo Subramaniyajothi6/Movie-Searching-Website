@@ -35,7 +35,7 @@ const MovieDetail = () => {
                 
                 <div className='p-10 bg-[#393E46] text-[#EEEEEE] rounded-3xl flex flex-col sm:flex-row '>
                     <img className='rounded-md h-60 sm:h-100' src={movied.Poster} alt={movied.Title} />
-                    <div className='px-2 w-80 sm:w-120 flex flex-col'>
+                    <div className='px-5 w-80 sm:w-120 flex flex-col'>
                         <h1 className='text-5xl my-2 font-bold text-[#00ADB5]  '>{movied.Title}</h1>
                         <p className='text-2xl font-medium my-2 '>Released : {movied.Released}</p>
                         <p className='my-1 text-lg font-medium '>Genre : {movied.Genre}</p>
