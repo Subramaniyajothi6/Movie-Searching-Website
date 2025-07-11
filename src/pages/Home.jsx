@@ -75,13 +75,13 @@ const Home = ({ movies, setMovies, query, setQuery, pages, setPages , movietype,
                 className="mySwiper"
                 loop="true"
             >
-                <SwiperSlide><Link to={"/moviesdetails?id=tt16311594"}><img loading='lazy' className='' src="https://wallpapercave.com/wp/wp15474023.jpg" alt="" /></Link></SwiperSlide>
-                <SwiperSlide><Link to={"/moviesdetails?id=tt14205554"}><img loading='lazy' className='' src="https://wallpapercave.com/wp/wp15515592.jpg" alt="" /></Link></SwiperSlide>
-                <SwiperSlide><Link to={"/moviesdetails?id=tt26743210"}><img loading='lazy' className='' src="https://wallpapercave.com/wp/wp15495330.jpg" alt="" /></Link></SwiperSlide>
-                <SwiperSlide><Link to={"/moviesdetails?id=tt7181546"}> <img loading='lazy' className='' src="https://wallpapercave.com/wp/wp15486178.jpg" alt="" /></Link></SwiperSlide>
-                <SwiperSlide><Link to={"/moviesdetails?id=tt26342662"}><img loading='lazy' className='' src="https://wallpapercave.com/wp/wp15532853.jpg" alt="" /></Link></SwiperSlide>
-                <SwiperSlide><Link to={"/moviesdetails?id=tt10676052"}><img loading='lazy' className='' src="https://wallpapercave.com/wp/wp13798652.jpg" alt="" /></Link></SwiperSlide>
-                <SwiperSlide><Link to={"/moviesdetails?id=tt5950044"}> <img loading='lazy' className='' src="https://wallpapercave.com/wp/wp15109252.jpg" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt16311594"}><img loading='lazy' className='' src="f1 movie.jpg" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt14205554"}><img loading='lazy' className='' src="Demon-hunter-Movie.webp" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt26743210"}><img loading='lazy' className='' src="How-train-your-dragon-movie.webp" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt7181546"}> <img loading='lazy' className='' src="Ballerina-movie.jpg" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt26342662"}><img loading='lazy' className='' src="Megan-movie.webp" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt10676052"}><img loading='lazy' className='' src="Fantastic-four-movie.jpg" alt="" /></Link></SwiperSlide>
+                <SwiperSlide><Link to={"/moviesdetails?id=tt5950044"}> <img loading='lazy' className='' src="Super-man-movie.jpg" alt="" /></Link></SwiperSlide>
 
 
 
