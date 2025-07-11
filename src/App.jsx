@@ -8,6 +8,7 @@ import MovieDetail from "./pages/MovieDetail";
 
 
 
+
 const App = () => {
     let [movies, setMovies] = useState([])
 

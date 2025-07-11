@@ -22,7 +22,7 @@ const Movies = ({ movies, pages, setPages, totalpages, query }) => {
 
     return (
         <>
-            <div className='container mx-auto my-10'>
+            <div className='container mx-auto my-20' id='search-results'>
 
                 <ul>
                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-5  '>
@@ -30,7 +30,14 @@ const Movies = ({ movies, pages, setPages, totalpages, query }) => {
                             movies.map((movie) => (
                                 <div key={movie.imdbID} className='text-center rounded-md hover:scale-105 transition duration-300 font-medium drop-shadow-stone-50'>
                                     <Link to={`/moviesdetails?id=${movie.imdbID}`}>
-                                        <img src={movie.Poster} alt={movie.Title} className='mx-auto max-h-100 rounded-md' />
+                                        <img
+                                            loading="lazy"
+                                            src={movie.Poster}
+                                            alt={movie.Title}
+                                            width="300"
+                                            height="450"
+                                            className="mx-auto max-h-100 rounded-md w-full h-auto"
+                                        />
                                         <h3 className='text-xl font-bold'>{movie.Title?.slice(0, 30)}</h3>
                                         <p>Year : {movie.Year}</p>
                                         <p>Type : {movie.Type}</p>
